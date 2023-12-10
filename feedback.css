@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Noto+Serif:wght@800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgb(0, 200, 255);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    border: rgb(0, 0, 65) 2px solid;
+}
+
+.sitename {
+    font-family: 'Noto Serif', serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+.nav_links li a:hover {
+    color: rgb(0, 0, 65);
+}
+
+.burger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.fa-bell {
+    position: relative;
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+}
+
+.fa-bell:hover {
+    color: rgb(0, 0, 65);
+}
+
+#notificationCounter {
+    display: none;
+}
+
+.notification-counter {
+    position: absolute;
+    top: -20px;
+    right: -12px;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    line-height: 1;
+    vertical-align: top;
+}
+
+.fa-bell:hover .notification-counter {
+    opacity: 0.8;
+}
+
+.notification-popup {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 33%;
+    background-color: rgb(0, 200, 255);
+    border: rgb(0, 0, 65) 2px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px;
+}
+
+.notification-popup p {
+    margin: 0;
+}
+
+.notification-content {
+    color: #fff;
+}
+
+.notification-icon:hover .notification-popup {
+    display: block;
+}
+
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: rgb(0, 0, 65) 1px solid;
+}
+
+.close-button {
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(0, 0, 65);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 65);
+}
+
+.footer-nav {
+    background-color: rgb(0, 200, 255);
+    padding: 20px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-col {
+    width: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgb(33, 33, 34);
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    background-color: rgb(0, 255, 247);
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    display: block;
+    font-size: 19px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+footer ul li a:hover {
+    color: rgb(33, 33, 34);
+}
+
+.links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: rgb(0, 145, 255);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover {
+    color: rgb(33, 33, 34);
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 255, 247);
+    margin: 10px auto;
+}
+
+.copyright {
+    background-color: rgb(0, 200, 255);
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 19px;
+    color: #ffffff;
+    margin-top: -10px;
+}
+
+main {
+    padding-top: 90px;
+    background-color: rgb(0, 200, 255, 0.2);
+    flex: 1;
+}
+
+.feed {
+    margin: 0px 30px 0px 30px;
+    border:rgb(0, 0, 65) 2px solid;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(0, 200, 255, 0.3);
+}
+
+.feed h1 {
+    text-align: center;
+    color: rgb(0, 0, 65);
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.feed p {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+main h2 {
+    color: rgb(0, 0, 65);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 60%;
+    margin: 20px auto 0;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(0, 0, 65);
+}
+
+form label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(0, 0, 65);
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: rgb(0, 200, 255);
+    color: #ffffff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+}
+
+form button:hover {
+    background-color: rgb(0, 160, 200);
+}
+
+.contacts {
+    font-size: 18px;
+    padding: 20px 0 20px 0;
+    color: rgb(0, 0, 65);
+    text-align: center;
+}
+
+@media only screen and (max-width: 830px) {
+    header {
+        padding: 20px 2%;
+    }
+
+    .sitename {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 40px;
+        margin: 0 auto;
+        image-rendering: optimizeQuality;
+    }
+
+    .nav_links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0, 200, 255);
+        border: 2px solid rgb(0, 0, 65);
+        text-align: center;
+    }
+
+    .nav_links.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_links li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .fa-solid.fa-bell {
+        margin-left: auto;
+        margin-right: 2%;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .notification-popup {
+        position: fixed;
+        top: 360px;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+        display: none;
+    }
+
+    .notification-popup.show {
+        display: block;
+    }
+
+    .nav_links.show {
+        flex-direction: column;
+        position: absolute;
+    }
+
+    .nav_links.show + .notification-popup {
+        top: 80px;
+    }
+
+    .notification-content {
+        padding: 10px 0;
+    }
+
+    .sitename img {
+        margin-right: 0;
+    }    
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav {
+        padding: 20px 5%;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        color: rgb(33, 33, 34);
+        position: relative;
+    }
+
+    .footer-col h4::before {
+        top: 95%;
+    }
+
+    .links {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .links a {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        color: white;
+        background-color: rgb(0, 145, 255);
+        margin: 0 8px 8px 0;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        transition: 0.4s;
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .copyright {
+        font-size: 18px;
+        margin-top: -10px;
+    }
+
+    .feed {
+        margin: 0 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .feed h1 {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .feed p {
+        font-size: 16px;
+    }
+
+    main h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    form {
+        max-width: 100%;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    form button {
+        padding: 12px 30px;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .contacts {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}
+
+@media screen and (min-width: 831px) and (max-width: 1024px) {
+    .sitename {
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .nav_links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav_links li {
+        padding: 0 10px;
+        width: calc(100% / 3);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .nav_links li a {
+        font-size: 16px;
+    }
+
+    .logo {
+        margin-right: 5px;
+    }
+
+    #notificationButton {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .sitename {
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .nav_links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav_links li {
+        padding: 0 10px;
+        width: calc(100% / 3);
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-right: 5px;
+    }
+
+    #notificationButton {
+        margin-right: 5px;
+    }
+}

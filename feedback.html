@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Гаджеты 21 века</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="favicon.png?v=2">
+        <link rel="stylesheet" href="feedback.css">
+        <script src="feedback.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script src="https://kit.fontawesome.com/325e14d06c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <a href="aboutCite.html"><img class="logo" src="logo.png" alt="logo"></a>
+            <label class="sitename">Гаджеты 21 века</label>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="aboutCite.html">О сайте</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="futureGadgets.html">О гаджетах будущего</a></li>
+                    <li><a href="feedback.html">Обратная связь</a></li>
+                    <li><a href="reg.html">Регистрация</a></li>
+                    <li><i class="fa-solid fa-bell fa-xl" id="notificationButton">
+                        <span class="notification-counter" id="notificationCounter">0</span>
+                    </i></li>
+                    <div class="notification-popup" id="notificationPopup">
+                        <div class="notification-content" id="notificationContent">Новых уведомлений нет</div>
+                    </div>
+                </ul>
+                <div class="burger-menu" id="burgerMenu">&#9776;</div>
+                <script>
+                    const burgerMenu = document.getElementById('burgerMenu');
+                    const navLinks = document.querySelector('.nav_links');
+
+                    burgerMenu.addEventListener('click', () => {
+                        navLinks.classList.toggle('show');
+                    });
+                </script>
+            </nav>
+        </header>
+        <main>
+            <div class="feed">
+                <h1>Обратная связь</h1>
+                <p>
+                Свяжитесь с нами, чтобы делиться вашими вопросами, предложениями или отзывами. Мы ценим каждое 
+                сообщение и стремимся сделать наш сайт еще лучше благодаря вашей обратной связи. Заполните форму 
+                ниже или свяжитесь с нами по электронной почте и телефону. Мы всегда готовы выслушать вас!
+                </p>
+            </div>
+            <form action="" method="post" id="feedbackForm">
+                <label for="name">Ваше Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Ваш E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Тема:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Ваше Сообщение:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <label for="rating">Как вы оцениваете наш сайт по шкале от 1 до 10?</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" required>
+
+                <label for="attachment">Прикрепить файл (по желанию):</label>
+                <input type="file" id="attachment" name="attachment">
+
+                <button type="submit">Отправить</button>
+            </form>
+            <p class="contacts">
+                Или свяжитесь с нами по электронной почте: <a href="mailto:nik.vilkov.2004@mail.ru">наша почта</a>
+                или по телефону: +7 (916) 619-56-08
+            </p>
+        </main>
+        <footer>
+            <nav class="footer-nav">
+                <div class="footer-col">
+                    <h4>Cсылки</h4>
+                        <ul>
+                            <li><a href="mainpage.html">Главная страница</a></li>
+                            <li><a href="feedback.html">Оставить отзыв</a></li>
+                            <li><a href="reg.html">Регистрация</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>О нас</h4>
+                        <ul>
+                            <li><a href="aboutCite.html">О нас</a></li>
+                            <li><a href="mailto:nik.vilkov.2004@mail.ru">Электронная почта</a></li>
+                            <li><a href="tel:+79166195608">Номер телефона</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Наши соцсети</h4>
+                        <div class="links">
+                            <a><i class="fa-brands fa-vk"></i></a>
+                            <a><i class="fa-brands fa-telegram"></i></a>
+                            <a><i class="fa-brands fa-square-whatsapp"></i></a>
+                        </div>
+                </div>
+                <hr>
+            </nav>
+            <p class="copyright">@ Вилков Никита 2023 ИКБО-30-22</p>
+        </footer>
+    </body>
+</html>
