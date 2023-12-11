@@ -378,6 +378,7 @@ h1 {
 
     .notification-popup.show {
         display: block;
+        overflow-y: auto;
     }
 
     .nav_links.show {
