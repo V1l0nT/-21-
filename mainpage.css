@@ -348,6 +348,8 @@ h1 {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow-y: auto;
+        max-height: calc(100vh - 80px);
     }
 
     .nav_links li {
@@ -468,16 +470,27 @@ h1 {
 
     .article img {
         max-width: 100%;
-    }
-
-    .article img {
         float: none;
-        margin-left: 0;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width:100%;
     }
 
     .article:nth-child(even) img {
         float: none;
-        margin-left: 0;
+        margin: 0;
+        max-width: 100%;
+        float: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width:100%;
     }
 }
 

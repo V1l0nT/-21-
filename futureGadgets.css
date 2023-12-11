@@ -348,6 +348,8 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow-y: auto;
+        max-height: calc(100vh - 80px);
     }
 
     .nav_links li {

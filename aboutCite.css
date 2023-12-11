@@ -421,6 +421,8 @@ main {
     .nav_links.show {
         flex-direction: column;
         position: absolute;
+        overflow-y: auto;
+        max-height: calc(100vh - 80px);
     }
 
     .nav_links.show + .notification-popup {
